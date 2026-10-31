@@ -1,1 +1,98 @@
-<meta charset="utf-8"><meta http-equiv="refresh" content="0;url=./رسالتك%20بمناسبة%20يوم%20الزراعة%20العماني.html">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>رسالتك بمناسبة يوم الزراعة العماني</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#f7e3f4;--bg2:#e3d0f7;--card:#fff;--text:#2a1b3d;--sub:#7a6a8c;--inp:#f5e6fa;--bd:#7b2d8e;--b1:#a0309a;--b2:#5b35c8;--msg:#f3ebff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#2a1536;--bg2:#1b1233;--card:#2b2140;--text:#f4eaff;--sub:#b9a8d0;--inp:#3a2b55;--bd:#b36be0;--msg:#38294f}}
+:root[data-theme="dark"]{--bg1:#2a1536;--bg2:#1b1233;--card:#2b2140;--text:#f4eaff;--sub:#b9a8d0;--inp:#3a2b55;--bd:#b36be0;--msg:#38294f}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{font-family:'Cairo',Tahoma,Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--text);padding:28px 16px 40px;text-align:center}
+h1{font-size:1.7rem;font-weight:800;margin:10px 0 6px;line-height:1.5}
+.sub{color:var(--sub);margin:0 0 22px}
+.card{max-width:440px;margin:0 auto;background:var(--card);border-radius:28px;padding:22px 18px;box-shadow:0 10px 30px rgba(120,60,160,.18)}
+label{display:block;font-weight:700;margin-bottom:12px}
+input{width:100%;font:inherit;font-size:1.1rem;text-align:center;color:var(--text);background:var(--inp);border:2px solid var(--bd);border-radius:18px;padding:14px;outline:none}
+button{width:100%;margin-top:14px;font:inherit;font-weight:800;font-size:1.15rem;color:#fff;border:0;border-radius:18px;padding:15px;background:linear-gradient(90deg,var(--b1),var(--b2));cursor:pointer}
+button:active{transform:scale(.98)}
+#res{display:none;margin-top:18px;background:var(--msg);border-radius:20px;padding:18px 14px;animation:pop .5s ease}
+#res .nm{font-weight:800;font-size:1.25rem;margin-bottom:8px}
+#res p{margin:0;line-height:1.9;font-size:1.05rem}
+#err{color:#c0392b;min-height:1.2em;margin:8px 0 0;font-size:.9rem}
+@keyframes pop{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:none}}
+.act{display:none;gap:10px;margin-top:14px}.act button{margin:0;font-size:1rem;padding:12px 6px}.act .w{background:#25a244}.act .i{background:linear-gradient(90deg,var(--b1),var(--b2))}#pv{display:none;width:100%;margin-top:14px;border-radius:16px}#hint{display:none;font-size:.85rem;color:var(--sub);margin:6px 0 0}
+.from{font-size:1.9rem;font-weight:800;margin:6px 0 0;line-height:1.5;color:var(--bd)}
+</style>
+</head>
+<body>
+<p class="from">اكتشفي رسالتك من الأستاذة ملوك 🌸</p>
+<h1>اكتشفي رسالتك بمناسبة يوم الزراعة العماني 🌱</h1>
+<p class="sub">✨ لكل معلمة رسالة خاصة بها</p>
+<div class="card">
+  <label for="n">اكتبي اسمك هنا</label>
+  <input id="n" type="text" placeholder="اسمك" autocomplete="off">
+  <button id="go">اكتشفي رسالتي 🎀</button>
+  <p id="err"></p>
+  <div id="res"><div class="nm" id="rn"></div><p id="rm"></p></div>
+  <div class="act" id="act"><button class="i" id="si">بطاقة صورة 🖼️</button></div>
+  <img id="pv" alt="بطاقة الرسالة"><p id="hint">اضغطي مطولًا على الصورة لحفظها ثم أرسليها في الجروب</p>
+</div>
+<script>
+var M=[
+"أنتِ كالنخلة العمانية: جذورك ثابتة، وعطاؤك يظلّل كل من حولك 🌴",
+"كما تزرعين العلم في عقول طالباتك، تنبت الأجيال وتزهر عُمان 🌱",
+"صبرك في التعليم يشبه صبر المزارع، والحصاد دائمًا أجمل مما نتوقع 🌾",
+"أنتِ بذرة خير في مدرستنا، وكل يوم تكبرين وتُثمرين أكثر 🌿",
+"في يوم الزراعة العماني، شكرًا لأنك تغرسين القيم قبل المعلومات 💚",
+"عطاؤك كأفلاج عُمان: يجري بهدوء ويُحيي كل ما يمرّ به 💧",
+"كما تُثمر الأرض الطيبة، يُثمر جهدك في قلوب طالباتك 🍃",
+"أنتِ وردة المدرسة، وعطرك الطيب يبقى في الذاكرة 🌹",
+"وجودك يزهر الصف كما يزهر الربيع في جبال الجبل الأخضر 🌸",
+"لولا المعلمة المبدعة لما نبتت العقول؛ كل عام وأنتِ نبع عطاء 🌻",
+"بذور اليوم هي قادة الغد، وأنتِ من تسقينها بالحب والعلم 🌳",
+"يومك مثل صباح المزرعة: نشاط وبركة وخير وفير ☀️"
+];
+function h(s){var x=0;for(var i=0;i<s.length;i++){x=(x*31+s.charCodeAt(i))>>>0}return x}
+function run(){
+  var v=document.getElementById('n').value.trim().replace(/\s+/g,' ');
+  var e=document.getElementById('err'),r=document.getElementById('res');
+  if(!v){e.textContent='فضلاً اكتبي اسمك أولاً';r.style.display='none';return}
+  e.textContent='';
+  document.getElementById('rn').textContent='أستاذة '+v+' 🎀';
+  document.getElementById('rm').textContent=M[h(v)%M.length];
+  r.style.display='none';void r.offsetWidth;r.style.display='block';
+  document.getElementById('act').style.display='flex';
+  try{document.getElementById('n').blur()}catch(x){}
+  setTimeout(function(){try{r.scrollIntoView({behavior:'smooth',block:'center'})}catch(x){window.scrollTo(0,document.body.scrollHeight)}},150);
+  document.getElementById('pv').style.display='none';document.getElementById('hint').style.display='none';
+}
+function wrap(c,t,w){var ws=t.split(' '),ls=[],l='';ws.forEach(function(x){var k=l?l+' '+x:x;if(c.measureText(k).width>w&&l){ls.push(l);l=x}else l=k});if(l)ls.push(l);return ls}
+function card(){
+  var cv=document.createElement('canvas');cv.width=1080;cv.height=1350;var c=cv.getContext('2d');
+  var g=c.createLinearGradient(0,0,0,1350);g.addColorStop(0,'#f7e3f4');g.addColorStop(1,'#d9c4f5');c.fillStyle=g;c.fillRect(0,0,1080,1350);
+  c.fillStyle='#fff';c.beginPath();if(c.roundRect){c.roundRect(70,150,940,1050,60)}else{c.rect(70,150,940,1050)}c.fill();
+  c.direction='rtl';c.textAlign='center';c.fillStyle='#7b2d8e';c.font='800 54px Cairo,Tahoma,Arial';
+  c.fillText('يوم الزراعة العماني 🌱',540,270);
+  c.fillStyle='#2a1b3d';c.font='800 70px Cairo,Tahoma,Arial';
+  var y=450;wrap(c,document.getElementById('rn').textContent,800).forEach(function(l){c.fillText(l,540,y);y+=100});
+  c.fillStyle='#4a3a5e';c.font='700 52px Cairo,Tahoma,Arial';y+=40;
+  wrap(c,document.getElementById('rm').textContent,800).forEach(function(l){c.fillText(l,540,y);y+=90});
+  return new Promise(function(ok){cv.toBlob(function(b){ok({b:b,u:cv.toDataURL('image/png')})},'image/png')});
+}
+document.getElementById('si').onclick=async function(){
+  try{await document.fonts.load('800 40px Cairo')}catch(e){}
+  var r=await card();var f=new File([r.b],'agri-day.png',{type:'image/png'});
+  if(navigator.canShare&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f]});return}catch(e){}}
+  var p=document.getElementById('pv');p.src=r.u;p.style.display='block';document.getElementById('hint').style.display='block';
+};
+document.getElementById('go').onclick=run;
+document.getElementById('n').onkeydown=function(ev){if(ev.key==='Enter')run()};
+</script>
+</body>
+</html>
+
